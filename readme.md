@@ -6,7 +6,7 @@
 
 3. Download all scripts using the Code > Download ZIP button at the top of this page.
 
-4. Extract both zip files, and copy the contents of the "Spotify Extended Streaming History" inside of the newly created "my_spotify_data" folder (or whatever name you gave it) into the "data" folder inside of the other extracted folder. **Make sure you copy the contents of "Spotify Extended Streaming History", not the folder itself!**
+4. Extract both zip files, and copy the contents of the "Spotify Extended Streaming History" inside of the newly created "my_spotify_data" folder (or whatever name you gave it) into the "data" folder inside of the other extracted folder (The one you downloaded from this page). **Make sure you copy the contents of "Spotify Extended Streaming History", not the folder itself!**
 
 5. To initialise, double click to initialise.bat. This may require administrator priviliges. This will open command prompt and download a few python libraries that the scripts need in order to run properly. The full list of used dependencies can be found in "requirements.txt". This will also create a "spotify_history.json" file, which merges all usefull info from the files spotify provided into one list of listening events. All scripts will use this file as their data source, so make sure you don't accidentally move or delete it. This process may take a few minutes at most. It will clearly display when it is finished, at which point you can press any key, or simply close the window.
 
