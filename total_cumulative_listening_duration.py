@@ -16,12 +16,22 @@ pivot = (
 
 cumulative = pivot.cumsum()
 
+weekly_duration = (
+    spotify_df.groupby(pd.Grouper(key="timestamp", freq="W"))
+      ["listening_duration_seconds"]
+      .sum()
+)/60
+
+# print(weekly_duration)
+# print(weekly_duration.sum())
+
 fig, ax = plt.subplots(figsize=(18, 10))
-ax.plot(cumulative.index, cumulative["listen_time_hours"], label="total listening duration", linewidth=1.8)
+ax.plot(cumulative.index, cumulative["listen_time_hours"], label="total listening duration (hours)", linewidth=1.8)
+ax.bar(weekly_duration.index,weekly_duration.values, label=f"listening duration per week (minutes)",color="lightgray",width=(weekly_duration.index[1] - weekly_duration.index[0]).days * 0.8)
  
 ax.set_title(f"Cumulative listening duration Over Time")
 ax.set_xlabel("Date")
-ax.set_ylabel("Hours listened")
+ax.set_ylabel("Time listened")
 ax.legend(loc="upper left", fontsize=9, ncol=2)
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
 ax.grid(alpha=0.3)
