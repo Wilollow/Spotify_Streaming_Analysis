@@ -38,4 +38,5 @@ fig.autofmt_xdate()
  
 plt.tight_layout()
 plt.savefig(f"./results/cumulative_duration_top_{TOP_X}_artists.png", dpi=150)
+print(f"Result saved in results/cumulative_duration_top_{TOP_X}_artists.png")
 # plt.show()
