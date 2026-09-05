@@ -11,7 +11,7 @@ TOP_X = int(args[1])
 
 spotify_df["timestamp"] = pd.to_datetime(spotify_df["timestamp"])
 spotify_df = spotify_df.sort_values("timestamp")
-top_artists = spotify_df["album_artist"].value_counts().head(TOP_X).index.tolist()
+top_artists = spotify_df.groupby("album_artist")["listening_duration_seconds"].sum().sort_values(ascending=False).head(TOP_X).index.tolist()
 
 df_top = spotify_df[spotify_df["album_artist"].isin(top_artists)].copy()
 

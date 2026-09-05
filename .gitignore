@@ -1,3 +1,6 @@
 data/*.pdf
 data/*.json
 spotify_history.json
+test.py
+test.json
+spotify_history_listenbrainz.json
