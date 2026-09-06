@@ -19,6 +19,12 @@
 
     - artist and album entropy
 
+    - weekly listening duration - top artists
+
+    - hourly and weekly listening distribution
+
+    - cumulative listening duration - top tracks
+
     enter a number (1 or 2) and press enter to confirm you selection. Based on what script you chose, the program may prompt you to choose a few more options. For instance, if you chose script 1, the program will ask you how many of your top artists you wish to analyse. It is recommended to choose a sensible number, such as 10. If you go much beyond 20, the resulting image will likely get very cluttered, but you can choose anything.
 
     Choosing 2, will have you make a similar choice, but additionally you will have to choose a minimum listening duration (in seconds) to include listens in the analysis. You may for instance not wish to include tracks you skipped after 5 seconds in the analysis. It is recommended to choose a duration between 30-60 seconds, but again, you can get creative.
